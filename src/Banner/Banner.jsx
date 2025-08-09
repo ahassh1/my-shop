@@ -10,11 +10,12 @@ const Banner = () => {
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div>
-            <h1 className="text-5xl font-bold">Box Office News!</h1>
+            <h1 className="text-5xl font-bold">Hello and Welcome!</h1>
             <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda{" "}
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Our collection has something for everyone. Don’t miss out on
+              exclusive deals and limited-time offers designed just for you.
+              Shopping has never been this easy or exciting. Shop now and bring
+              your favorites home today!
             </p>
             <button className="btn btn-primary">Get Started</button>
           </div>

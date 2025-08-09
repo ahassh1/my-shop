@@ -12,8 +12,8 @@ const Home = () => {
       <div className="md:p-24 md:bg-sky-200 bg-sky-100">
         <Banner></Banner>
       </div>
-      <div className="flex justify-around w-screen">
-        <div>
+      <div className="flex justify-between">
+        <div className="w-[67%] my-5">
           <Products></Products>
         </div>
         <div>
