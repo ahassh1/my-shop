@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Banner from "../Banner/Banner";
 import Footer from "../Footer/Footer";
@@ -6,6 +6,10 @@ import Products from "../components/Products/Products";
 import Cart from "../components/Cart/Cart";
 
 const Home = () => {
+  const [selectedProduct, setSelectedProduct] = useState([]);
+  const handleAddToCart = (product) => {
+    console.log(product);
+  };
   return (
     <div>
       <Navbar></Navbar>
@@ -14,7 +18,7 @@ const Home = () => {
       </div>
       <div className="flex justify-between">
         <div className="w-[67%] my-5">
-          <Products></Products>
+          <Products handleAddToCart={handleAddToCart}></Products>
         </div>
         <div>
           <Cart></Cart>

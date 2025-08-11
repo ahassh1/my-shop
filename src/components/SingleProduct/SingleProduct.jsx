@@ -1,9 +1,12 @@
 import React from "react";
 
-const SingleProduct = ({ product }) => {
+const SingleProduct = ({ product, handleAddToCart }) => {
   const { title, id, description, image, rating, currentBidPrice, timeLeft } =
     product;
 
+  const handleSelect = (product) => {
+    handleAddToCart(product);
+  };
   return (
     <div className="bg-sky-100 rounded-md border-1 border-gray-300 ">
       <div class="overflow-x-auto">
@@ -40,7 +43,9 @@ const SingleProduct = ({ product }) => {
               <td>{currentBidPrice}</td>
               <td>{timeLeft}</td>
               <th>
-                <button class="btn btn-ghost btn-xl">❤</button>
+                <button class="btn btn-ghost btn-xl" onClick={handleAddToCart}>
+                  ❤
+                </button>
               </th>
             </tr>
           </tbody>

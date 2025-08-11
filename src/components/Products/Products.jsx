@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SingleProduct from "../SingleProduct/SingleProduct";
 
-const Products = () => {
+const Products = ({ handleAddToCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -12,7 +12,10 @@ const Products = () => {
   return (
     <div>
       {products.map((p) => (
-        <SingleProduct product={p}></SingleProduct>
+        <SingleProduct
+          product={p}
+          handleAddToCart={handleAddToCart}
+        ></SingleProduct>
       ))}
     </div>
   );
