@@ -7,6 +7,7 @@ import Cart from "../components/Cart/Cart";
 
 const Home = () => {
   const [selectedProduct, setSelectedProduct] = useState([]);
+
   const handleAddToCart = (product) => {
     setSelectedProduct([...selectedProduct, product]);
   };

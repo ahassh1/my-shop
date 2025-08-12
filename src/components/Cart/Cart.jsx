@@ -10,7 +10,7 @@ const Cart = ({ selectedProduct }) => {
           className="flex justify-around items-center m-2 border-gray-300 border-1 "
         >
           <img className="w-16" src={p.image} alt="" />
-          <p>{p.title.slice(0, 19)}</p>
+          <p>{p.title.slice(0, 25)}</p>
           <button className="bg-red-400 p-1">Delete</button>
         </div>
       ))}
