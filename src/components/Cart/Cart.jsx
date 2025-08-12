@@ -13,7 +13,7 @@ const Cart = ({ selectedProduct, price, handleDelete }) => {
           <p>{p.title.slice(0, 25)}</p>
           <button
             onClick={() => handleDelete(p.id, p.price)}
-            className="bg-red-500 p-1"
+            className="bg-red-500 p-1 rounded-sm"
           >
             Delete
           </button>
@@ -22,7 +22,7 @@ const Cart = ({ selectedProduct, price, handleDelete }) => {
 
       <div>
         <h2 className="text-2xl font-semibold text-gray-600">
-          Total Price : ${price}
+          Total Price : ${price.toFixed(2)}
         </h2>
       </div>
     </div>
