@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 const SingleProduct = ({ product, handleAddToCart }) => {
   const [status, setStatus] = useState(false);
-  const { title, description, image, currentBidPrice, timeLeft } = product;
+  const { title, description, image, price, timeLeft } = product;
   const handleSelect = () => {
-    handleAddToCart(product);
+    handleAddToCart(product, price);
     setStatus(true);
   };
   return (
@@ -31,11 +31,13 @@ const SingleProduct = ({ product, handleAddToCart }) => {
                     </div>
                   </div>
                   <div>
-                    <div className="font-bold">{description}</div>
+                    <div className="font-semibold text-gray-600">
+                      {description}
+                    </div>
                   </div>
                 </div>
               </td>
-              <td>{currentBidPrice}</td>
+              <td>{price}</td>
               <td>{timeLeft}</td>
               <th>
                 <button

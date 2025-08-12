@@ -1,9 +1,9 @@
 import React from "react";
 
-const Cart = ({ selectedProduct }) => {
+const Cart = ({ selectedProduct, price }) => {
   return (
     <div className="text-end">
-      <h1 className="text-4xl p-5">MY CART</h1>
+      <h1 className="text-4xl p-5 font-bold text-gray-600">My Favorite Cart</h1>
       {selectedProduct.map((p) => (
         <div
           key={p.id}
@@ -11,9 +11,15 @@ const Cart = ({ selectedProduct }) => {
         >
           <img className="w-16" src={p.image} alt="" />
           <p>{p.title.slice(0, 25)}</p>
-          <button className="bg-red-400 p-1">Delete</button>
+          <button className="bg-red-500 p-1">Delete</button>
         </div>
       ))}
+
+      <div>
+        <h2 className="text-2xl font-semibold text-gray-600">
+          Total Price : ${price}
+        </h2>
+      </div>
     </div>
   );
 };

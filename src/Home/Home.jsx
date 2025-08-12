@@ -8,7 +8,9 @@ import Cart from "../components/Cart/Cart";
 const Home = () => {
   const [selectedProduct, setSelectedProduct] = useState([]);
 
-  const handleAddToCart = (product) => {
+  const [price, setPrice] = useState(0);
+  const handleAddToCart = (product, productPrice) => {
+    setPrice(price + productPrice);
     setSelectedProduct([...selectedProduct, product]);
   };
 
@@ -23,7 +25,7 @@ const Home = () => {
           <Products handleAddToCart={handleAddToCart}></Products>
         </div>
         <div>
-          <Cart selectedProduct={selectedProduct}></Cart>
+          <Cart price={price} selectedProduct={selectedProduct}></Cart>
         </div>
       </div>
       <div>

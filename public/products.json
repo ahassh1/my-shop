@@ -6,7 +6,7 @@
 
     "description": " It works by focusing light onto a light-sensitive surface",
 
-    "currentBidPrice": "$2,850",
+    "price": 2850,
 
     "timeLeft": "1 Days left",
 
@@ -22,7 +22,7 @@
 
     "description": " It's played by plucking or strumming the strings, either with fingers or a pick",
 
-    "currentBidPrice": "$2,950",
+    "price": 2950,
 
     "timeLeft": "2 Days left",
 
@@ -38,7 +38,7 @@
 
     "description": " It's played by plucking or strumming the strings, either with fingers or a pick",
 
-    "currentBidPrice": "$3,650",
+    "price": 3650,
 
     "timeLeft": "3 Days left",
 
@@ -54,7 +54,7 @@
 
     "description": "This watches epitomize timeless elegance and prestige among all luxury watches",
 
-    "currentBidPrice": "$1,850",
+    "price": 1850,
 
     "timeLeft": "4 Days left",
 
@@ -70,7 +70,7 @@
 
     "description": " the story of Jay Gatsby, a self-made millionaire, and his relentless pursuit of his former love, Daisy Buchanan. ",
 
-    "currentBidPrice": "$1,150",
+    "price": 1150,
 
     "timeLeft": "5 Days left",
 
@@ -86,7 +86,7 @@
 
     "description": " Typically designed for one person and consisting of one or more legs",
 
-    "currentBidPrice": "$1,050",
+    "price": 1050,
 
     "timeLeft": "6 Days left",
 
