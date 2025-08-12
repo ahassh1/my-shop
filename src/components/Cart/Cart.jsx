@@ -11,7 +11,10 @@ const Cart = ({ selectedProduct, price, handleDelete }) => {
         >
           <img className="w-16" src={p.image} alt="" />
           <p>{p.title.slice(0, 25)}</p>
-          <button onClick={() => handleDelete(p.id)} className="bg-red-500 p-1">
+          <button
+            onClick={() => handleDelete(p.id, p.price)}
+            className="bg-red-500 p-1"
+          >
             Delete
           </button>
         </div>
