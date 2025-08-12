@@ -1,27 +1,18 @@
 import React from "react";
 
 const SingleProduct = ({ product, handleAddToCart }) => {
-  const { title, id, description, image, rating, currentBidPrice, timeLeft } =
-    product;
+  const { title, description, image, currentBidPrice, timeLeft } = product;
 
-  const handleSelect = (product) => {
-    handleAddToCart(product);
-  };
   return (
-    <div className="bg-sky-100 rounded-md border-1 border-gray-300 ">
-      <div class="overflow-x-auto">
-        <table class="table">
+    <div className="bg-sky-100 rounded-md border border-gray-300">
+      <div className="overflow-x-auto">
+        <table className="table">
           <thead>
             <tr>
               <th>
                 <label>
-                  <input type="checkbox" class="checkbox" />
+                  <input type="checkbox" className="checkbox" />
                 </label>
-                {/* </th>
- <th>Name</th>
- <th>Job</th>
- <th>Favorite Color</th>
- <th> */}
               </th>
             </tr>
           </thead>
@@ -29,36 +20,29 @@ const SingleProduct = ({ product, handleAddToCart }) => {
             <tr>
               <th></th>
               <td>
-                <div class="flex items-center gap-3">
-                  <div class="avatar">
-                    <div class="mask mask-squircle h-17 w-18">
-                      <img src={image} alt="Avatar Tailwind CSS Component" />
+                <div className="flex items-center gap-3">
+                  <div className="avatar">
+                    <div className="mask mask-squircle h-16 w-20">
+                      <img src={image} alt={title} />
                     </div>
                   </div>
                   <div>
-                    <div class="font-bold">{description}</div>
+                    <div className="font-bold">{description}</div>
                   </div>
                 </div>
               </td>
               <td>{currentBidPrice}</td>
               <td>{timeLeft}</td>
               <th>
-                <button class="btn btn-ghost btn-xl" onClick={handleAddToCart}>
+                <button
+                  className="btn btn-ghost btn-xl"
+                  onClick={() => handleAddToCart(product)}
+                >
                   ❤
                 </button>
               </th>
             </tr>
           </tbody>
-
-          <tfoot>
-            <tr>
-              <th></th>
-              {/* <th>Name</th>
- <th>Job</th>
- <th>Favorite Color</th> */}
-              <th></th>
-            </tr>
-          </tfoot>
         </table>
       </div>
     </div>

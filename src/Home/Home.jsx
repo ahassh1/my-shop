@@ -22,7 +22,7 @@ const Home = () => {
           <Products handleAddToCart={handleAddToCart}></Products>
         </div>
         <div>
-          <Cart></Cart>
+          <Cart selectedProduct={selectedProduct}></Cart>
         </div>
       </div>
       <div>

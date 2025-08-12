@@ -36,6 +36,7 @@ const Navbar = ({ selectedProduct }) => {
                   {selectedProduct.length}
                 </span>
               </div>
+              Cart
             </div>
             <div
               tabIndex={0}
