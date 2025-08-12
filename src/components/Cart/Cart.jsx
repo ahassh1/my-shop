@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cart = ({ selectedProduct, price }) => {
+const Cart = ({ selectedProduct, price, handleDelete }) => {
   return (
     <div className="text-end">
       <h1 className="text-4xl p-5 font-bold text-gray-600">My Favorite Cart</h1>
@@ -11,7 +11,9 @@ const Cart = ({ selectedProduct, price }) => {
         >
           <img className="w-16" src={p.image} alt="" />
           <p>{p.title.slice(0, 25)}</p>
-          <button className="bg-red-500 p-1">Delete</button>
+          <button onClick={() => handleDelete(p.id)} className="bg-red-500 p-1">
+            Delete
+          </button>
         </div>
       ))}
 
@@ -25,17 +27,3 @@ const Cart = ({ selectedProduct, price }) => {
 };
 
 export default Cart;
-
-// const Cart = ({ selectedProduct = [] }) => {
-//   return (
-//     <div>
-//       {selectedProduct.map((p, index) => (
-//         <div key={p?.id || index} className="flex justify-around items-center">
-//           <img className="w-16" src={p?.image || ""} alt={p?.title || "No title"} />
-//           <p>{p?.title ? p.title.slice(0, 7) : ""}</p>
-//           <button>Delete</button>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };

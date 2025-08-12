@@ -14,6 +14,12 @@ const Home = () => {
     setSelectedProduct([...selectedProduct, product]);
   };
 
+  const handleDelete = (id) => {
+    // console.log(id);
+    const remainingProduct = selectedProduct.filter((p) => p.id !== id);
+    setSelectedProduct(remainingProduct);
+  };
+
   return (
     <div>
       <Navbar selectedProduct={selectedProduct}></Navbar>
@@ -25,7 +31,11 @@ const Home = () => {
           <Products handleAddToCart={handleAddToCart}></Products>
         </div>
         <div>
-          <Cart price={price} selectedProduct={selectedProduct}></Cart>
+          <Cart
+            price={price}
+            selectedProduct={selectedProduct}
+            handleDelete={handleDelete}
+          ></Cart>
         </div>
       </div>
       <div>

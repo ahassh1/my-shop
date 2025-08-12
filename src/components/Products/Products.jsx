@@ -13,6 +13,7 @@ const Products = ({ handleAddToCart }) => {
     <div>
       {products.map((p) => (
         <SingleProduct
+          key={p.id}
           product={p}
           handleAddToCart={handleAddToCart}
         ></SingleProduct>
